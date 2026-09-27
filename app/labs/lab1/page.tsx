@@ -1,6 +1,7 @@
 import HeadingTags from "./HeadingTags";
 import ParagraphTag from "./ParagraphTag";
-
+import ListTags from "./ListTags";
+import Tables from "./Tables";
 export default function Lab1() {
   return (
     <div id="wd-lab1">
@@ -8,6 +9,8 @@ export default function Lab1() {
       <h3>HTML Examples</h3>
       <HeadingTags />
       <ParagraphTag />
+      <ListTags />
+      <Tables />
       {/* do the next exercise here */}
     </div>
   );
