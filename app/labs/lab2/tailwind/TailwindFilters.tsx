@@ -1,7 +1,6 @@
 export default function TailwindFilters() {
-  // Same React logo the Kambaz Dashboard uses.
-  const src =
-    "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png";
+  // reactjs.jpg is used here so the lab runs out of the box.
+  const src = "/images/reactjs.jpg";
   return (
     <div>
       <h2 className="text-2xl font-bold">Blurs</h2>

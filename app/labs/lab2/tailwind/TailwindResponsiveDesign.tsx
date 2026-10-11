@@ -7,7 +7,7 @@ export default function TailwindResponsiveDesign() {
           <div className="relative md:w-48 md:shrink-0">
             <img
               className="h-56 w-full object-cover md:h-full md:min-h-56 md:w-48"
-              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png"
+              src="/images/reactjs.jpg"
               alt="React JS"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
