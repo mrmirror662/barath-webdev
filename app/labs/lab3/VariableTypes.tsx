@@ -6,6 +6,8 @@ export default function VariableTypes() {
   let isNumber = typeof numberVariable;
   let isString = typeof stringVariable;
   let isBoolean = typeof booleanVariable;
+  let secondString = "Web Development";
+  let secondNumber = 5610;
   return (
     <div id="wd-variable-types">
       <h4>Variables Types</h4>
@@ -15,7 +17,11 @@ export default function VariableTypes() {
       booleanVariable = {booleanVariable + ""}    <br />
       isNumber = {isNumber}                       <br />
       isString = {isString}                       <br />
-      isBoolean = {isBoolean}
+      isBoolean = {isBoolean} <br />
+      secondString = {secondString} <br />
+      typeof secondString = {typeof secondString} <br />
+      secondNumber = {secondNumber} <br />
+      typeof secondNumber = {typeof secondNumber}
       <hr />
     </div>
   );
