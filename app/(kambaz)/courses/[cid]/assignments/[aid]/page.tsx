@@ -1,4 +1,5 @@
 import Link from "next/link";
+import * as db from "../../../../database";
 
 const field = "w-full rounded border border-neutral-300 px-3 py-2";
 const row = "mb-4 grid grid-cols-[160px_1fr] items-start gap-3";
@@ -7,24 +8,25 @@ const label = "pt-2 text-right";
 export default async function AssignmentEditor({
   params,
 }: {
-  params: Promise<{ cid: string }>;
+  params: Promise<{ cid: string; aid: string }>;
 }) {
-  const { cid } = await params;
+  const { cid, aid } = await params;
+  const assignment = db.assignments.find((a) => a._id === aid);
   return (
     <div id="wd-assignments-editor" className="max-w-3xl">
       <label htmlFor="wd-name" className="mb-1 block">
         Assignment Name
       </label>
-      <input id="wd-name" defaultValue="A1 - ENV + HTML" className={`${field} mb-4`} />
+      <input id="wd-name" defaultValue={assignment?.title ?? ""} className={`${field} mb-4`} />
       <textarea
         id="wd-description"
         rows={5}
         className={`${field} mb-4`}
-        defaultValue="The assignment is available online Submit a link to the landing page of your Web application running on Vercel."
+        defaultValue={assignment?.description ?? ""}
       />
       <div className={row}>
         <label htmlFor="wd-points" className={label}>Points</label>
-        <input id="wd-points" defaultValue={100} className={field} />
+        <input id="wd-points" defaultValue={assignment?.points ?? 100} className={field} />
       </div>
       <div className={row}>
         <label htmlFor="wd-group" className={label}>Assignment Group</label>
@@ -80,13 +82,13 @@ export default async function AssignmentEditor({
           <label htmlFor="wd-assign-to" className="mb-1 block font-semibold">Assign to</label>
           <input id="wd-assign-to" defaultValue="Everyone" className={`${field} mb-3`} />
           <label htmlFor="wd-due-date" className="mb-1 block font-semibold">Due</label>
-          <input type="date" id="wd-due-date" defaultValue="2024-05-13" className={`${field} mb-3`} />
+          <input type="date" id="wd-due-date" defaultValue={assignment?.due} className={`${field} mb-3`} />
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label htmlFor="wd-available-from" className="mb-1 block font-semibold">
                 Available from
               </label>
-              <input type="date" id="wd-available-from" defaultValue="2024-05-06" className={field} />
+              <input type="date" id="wd-available-from" defaultValue={assignment?.available} className={field} />
             </div>
             <div>
               <label htmlFor="wd-available-until" className="mb-1 block font-semibold">
