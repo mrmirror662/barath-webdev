@@ -27,6 +27,13 @@ import Destructing from "./Destructing";
 import FunctionDestructing from "./FunctionDestructing";
 import DestructingImports from "./DestructingImports";
 import OptionalChaining from "./OptionalChaining";
+import Classes from "./Classes";
+import Styles from "./Styles";
+import ClientComponentDemo from "./ClientComponentDemo";
+import ServerComponentDemo from "./ServerComponentDemo";
+import Add from "./Add";
+import PathParameters from "./PathParameters";
+import TodoList from "./todos/TodoList";
 export default function Lab3() {
   console.log("Hello World!");
   return (
@@ -61,6 +68,14 @@ export default function Lab3() {
       <FunctionDestructing />
       <DestructingImports />
       <OptionalChaining />
+      <Classes />
+      <Styles />
+      <ClientComponentDemo />
+      <ServerComponentDemo />
+      <Add a={3} b={4} />
+      <Add a={10} b={20} />
+      <PathParameters />
+      <TodoList />
     </div>
   );
 }
