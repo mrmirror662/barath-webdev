@@ -21,14 +21,6 @@ export default function ArrayStateVariable() {
       >
         Add Element
       </button>
-      <button
-        type="button"
-        onClick={() => setArray([1, 2, 3, 4, 5])}
-        id="wd-clear-elements-click"
-        className="mb-2 ms-2 rounded bg-neutral-600 px-3 py-1.5 text-sm font-medium text-white"
-      >
-        Clear
-      </button>
       <ul className="m-0 max-w-xs list-none p-0">
         {array.map((item, index) => (
           <li

@@ -23,14 +23,6 @@ export default function Counter() {
       >
         Down
       </button>
-      <button
-        type="button"
-        onClick={() => setCount(7)}
-        id="wd-counter-my-reset-click"
-        className="ms-2 rounded bg-neutral-600 px-3 py-1.5 text-sm font-medium text-white"
-      >
-        Reset
-      </button>
       <hr />
     </div>
   );

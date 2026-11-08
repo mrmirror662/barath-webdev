@@ -10,24 +10,21 @@ import StringStateVariables from "./StringStateVariables";
 import DateStateVariable from "./DateStateVariable";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
+import ParentStateComponent from "./ParentStateComponent";
+import UrlEncoding from "./UrlEncoding";
+import ZustandExamples from "./zustand/ZustandExamples";
+import ReduxExamples from "./redux/ReduxExamples";
 
 export default function Lab4() {
   const sayHello = (message: string) => {
     alert(message);
-  };
-  const sayMyName = () => {
-    alert("Barath Keshav");
   };
   return (
     <div id="wd-lab4">
       <h2>Lab 4</h2>
       <ClickEvent />
       <PassingDataOnEvent />
-      <PassingFunctions
-        message="Hello from Lab 4"
-        theFunction={sayHello}
-        nameFunction={sayMyName}
-      />
+      <PassingFunctions message="Hello from Lab 4" theFunction={sayHello} />
       <CounterBroken />
       <Counter />
       <BooleanStateVariables />
@@ -35,6 +32,10 @@ export default function Lab4() {
       <DateStateVariable />
       <ObjectStateVariable />
       <ArrayStateVariable />
+      <ParentStateComponent />
+      <UrlEncoding />
+      <ZustandExamples />
+      <ReduxExamples />
     </div>
   );
 }
