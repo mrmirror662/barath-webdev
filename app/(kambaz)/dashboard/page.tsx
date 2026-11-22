@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
+import * as client from "../courses/client";
 import {
   emptyCourse,
   useCoursesStore,
@@ -10,9 +11,16 @@ import {
 
 export default function Dashboard() {
   const courses = useCoursesStore((state) => state.courses);
+  const setCourses = useCoursesStore((state) => state.setCourses);
   const addCourse = useCoursesStore((state) => state.addCourse);
   const updateCourse = useCoursesStore((state) => state.updateCourse);
   const [course, setCourse] = useState<Course>(emptyCourse);
+  useEffect(() => {
+    const load = async () => {
+      setCourses(await client.fetchAllCourses());
+    };
+    load();
+  }, []);
 
   return (
     <div id="wd-dashboard">

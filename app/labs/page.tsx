@@ -12,6 +12,15 @@ export default function Labs() {
       >
         GitHub Repository
       </a>
+      <br />
+      <a
+        id="wd-server-github"
+        href="https://github.com/mrmirror662/webdev-server"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Server GitHub Repository
+      </a>
       <ul>
         <li>
           <Link href="/labs/lab1" id="wd-lab1-link">

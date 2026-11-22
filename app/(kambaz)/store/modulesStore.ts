@@ -1,7 +1,6 @@
 "use client";
 
 import { create } from "zustand";
-import modulesJson from "../database/modules.json";
 
 export type Lesson = {
   _id: string;
@@ -21,6 +20,7 @@ export type CourseModule = {
 
 type ModulesStore = {
   modules: CourseModule[];
+  setModules: (modules: CourseModule[]) => void;
   addModule: (module: { name: string; course: string }) => void;
   deleteModule: (moduleId: string) => void;
   updateModule: (module: CourseModule) => void;
@@ -28,7 +28,8 @@ type ModulesStore = {
 };
 
 export const useModulesStore = create<ModulesStore>((set) => ({
-  modules: modulesJson as CourseModule[],
+  modules: [],
+  setModules: (modules) => set({ modules }),
   addModule: (module) =>
     set((state) => ({
       modules: [
