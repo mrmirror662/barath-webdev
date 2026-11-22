@@ -21,6 +21,15 @@ export default function Labs() {
       >
         Server GitHub Repository
       </a>
+      <br />
+      <a
+        id="wd-server"
+        href="https://webdev-server-9324.onrender.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Server
+      </a>
       <ul>
         <li>
           <Link href="/labs/lab1" id="wd-lab1-link">

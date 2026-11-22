@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/labs/lab5", id: "wd-lab5-link", label: "Lab 5", match: (p: string) => p.includes("/lab5") },
   { href: "/", id: "wd-kambaz-link", label: "Kambaz", match: () => false },
   { href: "https://github.com/mrmirror662/webdev-server", id: "wd-server-github-link", label: "Server GitHub", match: () => false },
+  { href: "https://webdev-server-9324.onrender.com", id: "wd-server-link", label: "Server", match: () => false },
   { href: "https://kambaz.dev/book/ch1", id: "wd-toc-book-link", label: "Chapter 1", match: () => false },
 ] as const;
 const activeStyle = {
